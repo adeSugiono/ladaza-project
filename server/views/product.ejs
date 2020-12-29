@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
         content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
-    <!-- Fav Icon  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
     <title>Products | DashLite Admin Template</title>
@@ -690,7 +691,7 @@
                                                     New</span></button>
                                         </div>
                                     </div>
-                                </div><!-- .nk-block -->
+                            </div><!-- .nk-block -->
                             </form>
                         </div>
                     </div>
@@ -718,12 +719,16 @@
     <!-- JavaScript -->
     <script type="text/javascript">
         const API_URL = 'http://localhost:3000/api';
-        $('#form-input').submit(function (e) {
-            e.preventDefault()
-            addData()
-            $('#form-input').trigger("reset");
-        })
+        $(document).ready(function () {
 
+            $('#form-input').submit(function (e) {
+                e.preventDefault()
+                addData()
+                $('#form-input').trigger("reset");
+            })
+
+
+        })
         function loadData() {
             $.ajax({
                 url: `${API_URL}`,
@@ -732,13 +737,12 @@
                 drawTable(data);
             })
         }
-
         const addData = () => {
             $.ajax({
                 method: "POST",
                 url: `${API_URL}/product`,
                 dataType: "json",
-                data: { title: $('#title').val(), brand: $('#brand').val(), price: $('#price').val(), quantity: $('#quantity').val(), category: $('#category').val(), description: $('#description').val(), detail: $('detail').val() }
+                data: { title: $('#title').val(), brand: $('#brand').val(), price: $('#price').val(), quantity: $('#quantity').val(), category: $('#category').val(), description: $('#description').val(), detail: $('detail').val() },
             })
                 .done(data => {
                     showAlert("Data has been added");
@@ -750,6 +754,7 @@
                     $('#description').val('');
                     $('#detail').val('')
                     loadData();
+                    console.log({data})
                 })
                 .fail(function (jqXHR, textStatus) {
                     alert("Request failed delete data: " + textStatus);

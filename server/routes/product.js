@@ -11,8 +11,8 @@ router.get('/', function (req, res, next) {
 
 // add product
 router.post('/', function (req, res, next) {
-  const { id, title, brand, price, quantity, description, category, description, detail } = req.body;
-  Product.create({ id, title, brand, price, quantity, description, category, description, detail }, function (err, data) {
+  const { id, title, brand, price, quantity, category, description, detail } = req.body;
+  Product.create({ id, title, brand, price, quantity, category, description, detail }, function (err, data) {
     res.status(201).json({
       status: "SUCCESS",
       data: data
