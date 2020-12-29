@@ -8,6 +8,7 @@ const cors = require('cors');
 mongoose.connect('mongodb://localhost/ladazadb', {useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
 var indexRouter = require('./routes/index');
 var productRouter = require('./routes/product');
+const adminRouter = require('./routes/admin');
 const {request} = require('express');
 
 
@@ -22,5 +23,6 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/api/product', productRouter);
+app.use('/api/admins', adminRouter);
 
 module.exports = app;
