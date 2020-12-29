@@ -9,6 +9,7 @@ mongoose.connect('mongodb://localhost/ladazadb', {useUnifiedTopology: true, useN
 
 const indexRouter = require('./routes/index');
 const productRouter = require('./routes/product');
+const adminRouter = require('./routes/admin');
 
 const app = express();
 
@@ -24,5 +25,6 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/api/product', productRouter);
+app.use('/api/admins', adminRouter);
 
 module.exports = app;
