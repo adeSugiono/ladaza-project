@@ -5,7 +5,7 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-mongoose.connect('mongodb://localhost/ladazadb', {
+mongoose.connect('mongodb://localhost/porjectdb', {
     useUnifiedTopology: true, 
     useNewUrlParser: true, 
     useFindAndModify: false 
