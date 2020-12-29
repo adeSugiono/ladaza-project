@@ -35,4 +35,9 @@ router.get('/reset', function(req, res, next) {
   
 // });
 
+
+router.get('/product', function(req, res, next) {
+  res.render('product', { title: 'Product' });
+});
+
 module.exports = router;
