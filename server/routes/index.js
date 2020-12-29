@@ -6,11 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Admin Dashboard' });
 });
 
-<<<<<<< HEAD
-router.get('/product', function(req,res, next ) {
-  res.render('product');
-})
-=======
 // Admin Login
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Login' });
@@ -39,6 +34,5 @@ router.get('/reset', function(req, res, next) {
 // router.post('/reset', function(req, res, next) {
   
 // });
->>>>>>> a0d97e4a00a4ac5c8d716281f1a5e7c128fc88d0
 
 module.exports = router;
