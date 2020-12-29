@@ -5,7 +5,11 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-mongoose.connect('mongodb://localhost/ladazadb', {useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
+mongoose.connect('mongodb://localhost/ladazadb', {
+    useUnifiedTopology: true, 
+    useNewUrlParser: true, 
+    useFindAndModify: false 
+});
 
 const indexRouter = require('./routes/index');
 const productRouter = require('./routes/product');
@@ -25,6 +29,6 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/api/product', productRouter);
-app.use('/api/admins', adminRouter);
+app.use('/api/admin', adminRouter);
 
 module.exports = app;
