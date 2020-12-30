@@ -237,207 +237,203 @@
                             </div><!-- .nk-block-between -->
                         </div><!-- .nk-block-head -->
                         <div class="nk-block">
-                            <div class="nk-tb-list is-separate mb-3">
+                            <div class="nk-tb-list is-separate mb-3" id="table-head">
                                 <div class="nk-tb-item nk-tb-head">
-                                    <div class="nk-tb-col nk-tb-col-check">
+                                    <!-- <div class="nk-tb-col nk-tb-col-check">
                                         <div class="custom-control custom-control-sm custom-checkbox notext">
                                             <input type="checkbox" class="custom-control-input" id="uid">
                                             <label class="custom-control-label" for="uid"></label>
                                         </div>
-                                    </div>
-                                    <table>
-                                        <thead>
-                                            <th class="nk-tb-col tb-col-sm"><span>Title</span></th>
-                                            <th class="nk-tb-col"><span>Brand</span></th>
-                                            <th class="nk-tb-col"><span>Price</span></th>
-                                            <th class="nk-tb-col"><span>Quantity</span></th>
-                                            <th class="nk-tb-col tb-col-md"><span>Category</span></th>
-                                            <th class="nk-tb-col nk-tb-col-tools">
-                                                <ul class="nk-tb-actions gx-1 my-n1">
-                                                    <li class="mr-n1">
-                                                        <div class="dropdown">
-                                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger"
-                                                                data-toggle="dropdown"><em
-                                                                    class="icon ni ni-more-h"></em></a>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <ul class="link-list-opt no-bdr">
-                                                                    <li><a href="#"><em
-                                                                                class="icon ni ni-edit"></em><span>Edit
-                                                                                Selected</span></a></li>
-                                                                    <li><a href="#"><em
-                                                                                class="icon ni ni-trash"></em><span>Remove
-                                                                                Selected</span></a></li>
-                                                                    <li><a href="#"><em
-                                                                                class="icon ni ni-bar-c"></em><span>Update
-                                                                                Stock</span></a></li>
-                                                                    <li><a href="#"><em
-                                                                                class="icon ni ni-invest"></em><span>Update
-                                                                                Price</span></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </th>
-                                        </thead>
-                                        <tbody id="myTable">
-                                        </tbody>
-                                    </table>
-                                </div><!-- .nk-tb-item -->
-                            </div><!-- .nk-tb-list -->
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="nk-block-between-md g-3">
-                                        <div class="g">
-                                            <ul class="pagination justify-content-center justify-content-md-start">
-                                                <li class="page-item"><a class="page-link" href="#"><em
-                                                            class="icon ni ni-chevrons-left"></em></a></li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><span class="page-link"><em
-                                                            class="icon ni ni-more-h"></em></span></li>
-                                                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                                <li class="page-item"><a class="page-link" href="#"><em
-                                                            class="icon ni ni-chevrons-right"></em></a></li>
-                                            </ul><!-- .pagination -->
-                                        </div>
-                                        <div class="g">
-                                            <div
-                                                class="pagination-goto d-flex justify-content-center justify-content-md-start gx-3">
-                                                <div>Page</div>
-                                                <div>
-                                                    <select class="form-select form-select-sm" data-search="on"
-                                                        data-dropdown="xs center">
-                                                        <option value="page-1">1</option>
-                                                        <option value="page-2">2</option>
-                                                        <option value="page-4">4</option>
-                                                        <option value="page-5">5</option>
-                                                        <option value="page-6">6</option>
-                                                        <option value="page-7">7</option>
-                                                        <option value="page-8">8</option>
-                                                        <option value="page-9">9</option>
-                                                        <option value="page-10">10</option>
-                                                        <option value="page-11">11</option>
-                                                        <option value="page-12">12</option>
-                                                        <option value="page-13">13</option>
-                                                        <option value="page-14">14</option>
-                                                        <option value="page-15">15</option>
-                                                        <option value="page-16">16</option>
-                                                        <option value="page-17">17</option>
-                                                        <option value="page-18">18</option>
-                                                        <option value="page-19">19</option>
-                                                        <option value="page-20">20</option>
-                                                    </select>
+                                    </div> -->
+                                    <div class="nk-tb-col tb-col-sm"><span>Title</span></div>
+                                    <div class="nk-tb-col"><span>Brand</span></div>
+                                    <div class="nk-tb-col"><span>Price</span></div>
+                                    <div class="nk-tb-col"><span>Quantity</span></div>
+                                    <div class="nk-tb-col tb-col-md"><span>Category</span></div>
+                                    <div class="nk-tb-col nk-tb-col-tools">
+                                        <ul class="nk-tb-actions gx-1 my-n1">
+                                            <li class="mr-n1">
+                                                <div class="dropdown">
+                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger"
+                                                        data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <ul class="link-list-opt no-bdr">
+                                                            <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit
+                                                                        Selected</span></a></li>
+                                                            <li><a href="#"><em
+                                                                        class="icon ni ni-trash"></em><span>Remove
+                                                                        Selected</span></a></li>
+                                                            <li><a href="#"><em
+                                                                        class="icon ni ni-bar-c"></em><span>Update
+                                                                        Stock</span></a></li>
+                                                            <li><a href="#"><em
+                                                                        class="icon ni ni-invest"></em><span>Update
+                                                                        Price</span></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                                <div>OF 102</div>
-                                            </div>
-                                        </div><!-- .pagination-goto -->
-                                    </div><!-- .nk-block-between -->
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="nk-tb-item" id="table-item">
+
                                 </div>
                             </div>
-                        </div><!-- .nk-block -->
-                        <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct"
-                            data-toggle-screen="any" data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
-                            <div class="nk-block-head">
-                                <div class="nk-block-head-content">
-                                    <h5 class="nk-block-title">New Product</h5>
-                                    <div class="nk-block-des">
-                                        <p>Add information and add new product.</p>
-                                    </div>
+                        </div><!-- .nk-tb-item -->
+                    </div><!-- .nk-tb-list -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="nk-block-between-md g-3">
+                                <div class="g">
+                                    <ul class="pagination justify-content-center justify-content-md-start">
+                                        <li class="page-item"><a class="page-link" href="#"><em
+                                                    class="icon ni ni-chevrons-left"></em></a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><span class="page-link"><em
+                                                    class="icon ni ni-more-h"></em></span></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><em
+                                                    class="icon ni ni-chevrons-right"></em></a></li>
+                                    </ul><!-- .pagination -->
                                 </div>
-                            </div><!-- .nk-block-head -->
-                            <div class="nk-block">
-                                <form action="/api/product" method="POST" id="form-input">
-                                    <div class="row g-3">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label class="form-label" for="product-title">Product Title</label>
-                                                <div class="form-control-wrap">
-                                                    <input type="text" class="form-control" id="title">
-                                                </div>
-                                            </div>
+                                <div class="g">
+                                    <div
+                                        class="pagination-goto d-flex justify-content-center justify-content-md-start gx-3">
+                                        <div>Page</div>
+                                        <div>
+                                            <select class="form-select form-select-sm" data-search="on"
+                                                data-dropdown="xs center">
+                                                <option value="page-1">1</option>
+                                                <option value="page-2">2</option>
+                                                <option value="page-4">4</option>
+                                                <option value="page-5">5</option>
+                                                <option value="page-6">6</option>
+                                                <option value="page-7">7</option>
+                                                <option value="page-8">8</option>
+                                                <option value="page-9">9</option>
+                                                <option value="page-10">10</option>
+                                                <option value="page-11">11</option>
+                                                <option value="page-12">12</option>
+                                                <option value="page-13">13</option>
+                                                <option value="page-14">14</option>
+                                                <option value="page-15">15</option>
+                                                <option value="page-16">16</option>
+                                                <option value="page-17">17</option>
+                                                <option value="page-18">18</option>
+                                                <option value="page-19">19</option>
+                                                <option value="page-20">20</option>
+                                            </select>
                                         </div>
-                                        <div class="col-mb-6">
-                                            <div class="form-group">
-                                                <label class="form-label" for="regular-price">Brand</label>
-                                                <div class="form-control-wrap">
-                                                    <input type="text" class="form-control" id="brand">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-mb-6">
-                                            <div class="form-group">
-                                                <label class="form-label" for="sale-price">Price</label>
-                                                <div class="form-control-wrap">
-                                                    <input type="text" class="form-control" id="price">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-mb-6">
-                                            <div class="form-group">
-                                                <label class="form-label" for="stock">Quantity</label>
-                                                <div class="form-control-wrap">
-                                                    <input type="text" class="form-control" id="quantity">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-mb-6">
-                                            <div class="form-group">
-                                                <label class="form-label" for="SKU">Category</label>
-                                                <div class="form-control-wrap">
-                                                    <input type="text" class="form-control" id="category">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label class="form-label" for="category">Description</label>
-                                                <div class="form-control-wrap">
-                                                    <input type="text" class="form-control" id="description">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label class="form-label" for="tags">Detail</label>
-                                                <div class="form-control-wrap">
-                                                    <input type="text" class="form-control" id="detail">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="upload-zone small bg-lighter my-2">
-                                                <div class="dz-message">
-                                                    <span class="dz-message-text">Drag and drop file</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary" type="submit"><em
-                                                    class="icon ni ni-plus"></em><span>Add
-                                                    New</span></button>
-                                        </div>
+                                        <div>OF 102</div>
                                     </div>
-                            </div><!-- .nk-block -->
-                            </form>
+                                </div><!-- .pagination-goto -->
+                            </div><!-- .nk-block-between -->
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- content @e -->
-        <!-- footer @s -->
-        <div class="nk-footer">
-            <div class="container-fluid">
-                <div class="nk-footer-wrap">
-                    <div class="nk-footer-copyright"> &copy; 2020 Batch 23 Rubicamp <a href="https://softnio.com"
-                            target="_blank">Softnio</a>
+                </div><!-- .nk-block -->
+                <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct"
+                    data-toggle-screen="any" data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
+                    <div class="nk-block-head">
+                        <div class="nk-block-head-content">
+                            <h5 class="nk-block-title">New Product</h5>
+                            <div class="nk-block-des">
+                                <p>Add information and add new product.</p>
+                            </div>
+                        </div>
+                    </div><!-- .nk-block-head -->
+                    <div class="nk-block">
+                        <form action="/api/product" method="POST" id="form-input">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="product-title">Product Title</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control" id="title">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-mb-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="regular-price">Brand</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control" id="brand">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-mb-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="sale-price">Price</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control" id="price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-mb-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="stock">Quantity</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control" id="quantity">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-mb-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="SKU">Category</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control" id="category">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="category">Description</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control" id="description">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="tags">Detail</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control" id="detail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="upload-zone small bg-lighter my-2">
+                                        <div class="dz-message">
+                                            <span class="dz-message-text">Drag and drop file</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary" type="submit"><em
+                                            class="icon ni ni-plus"></em><span>Add
+                                            New</span></button>
+                                </div>
+                            </div><!-- .nk-block -->
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- footer @e -->
+    </div>
+    <!-- content @e -->
+    <!-- footer @s -->
+    <div class="nk-footer">
+        <div class="container-fluid">
+            <div class="nk-footer-wrap">
+                <div class="nk-footer-copyright"> &copy; 2020 Batch 23 Rubicamp <a href="https://softnio.com"
+                        target="_blank">Softnio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer @e -->
     </div>
     <!-- wrap @e -->
     </div>
@@ -454,8 +450,11 @@
                 addData()
                 $('#form-input').trigger("reset");
             })
-
-
+            $("#table-head #table-item").on("click", ".btn-delete", function () {
+                if (confirm("Are you sure ?")) {
+                    deleteData($(this).attr("data-id"));
+                }
+            })
         })
         const getData = () => {
             $.ajax({
@@ -466,50 +465,51 @@
                 .done(function (data) {
                     let html = '';
                     data.forEach(item => {
-                        html += `<tr>
-                            <td class="nk-tb-col tb-col-sm">
-    <span class="tb-product">
-        <img src="./images/product/e.png" alt="" class="thumb">
-        <span class="title">${item.title}</span>
-    </span>
-</td>
-<td class="nk-tb-col">
-    <span class="tb-sub">${item.brand}</span>
-</td>
-<td class="nk-tb-col">
-    <span class="tb-lead">${item.price}</span>
-</td>
-<td class="nk-tb-col">
-    <span class="tb-sub">${item.quantity}</span>
-</td>
-<td class="nk-tb-col tb-col-md">
-    <span class="tb-sub">${item.category}</span>
-</td>
-<td class="nk-tb-col nk-tb-col-tools">
-    <ul class="nk-tb-actions gx-1 my-n1">
-        <li class="mr-n1">
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em
-                        class="icon ni ni-more-h"></em></a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <ul class="link-list-opt no-bdr">
-                        <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit
-                                    Product</span></a></li>
-                        <li><a href="#"><em class="icon ni ni-eye"></em><span>View
-                                    Product</span></a></li>
-                        <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Product
-                                    Orders</span></a></li>
-                        <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove
-                                    Product</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul>
-</td>
-          </tr>`
+                        html += `
+                        <div class="nk-tb-item">
+                        <div class="nk-tb-col tb-col-sm">
+                                        <span class="tb-product">
+                                            <img src="./images/product/e.png" alt="" class="thumb">
+                                            <span class="title">${item.title}</span>
+                                        </span>
+                                    </div>
+                                    <div class="nk-tb-col">
+                                        <span class="tb-sub">${item.brand}</span>
+                                    </div>
+                                    <div class="nk-tb-col">
+                                        <span class="tb-lead">${item.price}</span>
+                                    </div>
+                                    <div class="nk-tb-col">
+                                        <span class="tb-sub">${item.quantity}</span>
+                                    </div>
+                                    <div class="nk-tb-col tb-col-md">
+                                        <span class="tb-sub">${item.category}</span>
+                                    </div>
+                                    <div class="nk-tb-col nk-tb-col-tools">
+                                        <ul class="nk-tb-actions gx-1 my-n1">
+                                            <li class="mr-n1">
+                                                <div class="dropdown">
+                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em
+                                                            class="icon ni ni-more-h"></em></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <ul class="link-list-opt no-bdr">
+                                                            <li><a href="#" data-target="addProduct"><em class="toggle icon ni ni-edit"></em><span>Edit
+                                                                        Product</span></a></li>
+                                                            <li><a href="#"><em class="icon ni ni-eye"></em><span>View
+                                                                        Product</span></a></li>
+                                                            <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Product
+                                                                        Orders</span></a></li>
+                                                            <li> <button data-id="${item._id}" type="submit" class="btn btn-danger btn-delete"><em class="icon ni ni-trash" dataid="${item._id}"></em><span>Remove
+                                                                        Product</span></a></li></button>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </div>`
                     });
-                    $('table tbody').html(html)
+                    $('#table-head #table-item').html(html)
                 })
                 .fail(function (jqXHR, textStatus) {
                     alert("Request failed get data: " + textStatus);
@@ -523,8 +523,22 @@
                 data: { title: $('#title').val(), brand: $('#brand').val(), price: $('#price').val(), quantity: $('#quantity').val(), category: $('#category').val(), description: $('#description').val(), detail: $('detail').val() },
             })
                 .done(data => {
-                     getData()
+                    getData()
                     console.log({ data })
+                })
+                .fail(function (jqXHR, textStatus) {
+                    alert("Request failed delete data: " + textStatus
+);
+                })
+        }
+        const deleteData = (id) => {
+            $.ajax({
+                method: "DELETE",
+                url: `${API_URL}/product/${id}`,
+                dataType: "json"
+            })
+                .done(function (data) {
+                    getData()
                 })
                 .fail(function (jqXHR, textStatus) {
                     alert("Request failed delete data: " + textStatus);
