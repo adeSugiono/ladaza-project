@@ -1,6 +1,8 @@
 var express = require('express');
+const { isValidObjectId } = require('mongoose');
 var router = express.Router();
 var Product = require('../models/product');
+const ObjectId = require('mongodb').ObjectId;
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
@@ -40,8 +42,8 @@ router.put('/:id', function (req, res, next) {
 })
 
 // delete product
-router.delete('/:id', function (req, res, next) {
-  Product.findOneAndRemove({ id: Number(req.params.id) }, function (err, data) {
+router.delete('/:_id', function (req, res, next) {
+  Product.findByIdAndDelete({ _id: (req.params._id) }, function (err, data) {
     res.status(201).json({
       status: "SUCCESS",
       data: data
