@@ -6,8 +6,13 @@ var Product = require('../models/product');
 router.get('/', function (req, res, next) {
   Product.find({}, (err, data) => {
     res.status(200).json(data)
-  })
-});
+  }).catch(err => {
+    json({
+      error: true,
+      message: `something went wrong : ${err.message}`
+    })
+  });
+})
 
 // add product
 router.post('/', function (req, res, next) {

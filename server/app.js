@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-mongoose.connect('mongodb://localhost/porjectdb', {
+mongoose.connect('mongodb://localhost/ladazadb', {
     useUnifiedTopology: true, 
     useNewUrlParser: true, 
     useFindAndModify: false 
