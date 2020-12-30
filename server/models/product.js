@@ -6,8 +6,9 @@ const dataSchema = new mongoose.Schema({
     brand: String,
     price: Number,
     quantity: Number,
-    category: String
-
+    category: String,
+    description: String,
+    detail: String
 });
 
 module.exports = mongoose.model('Product', dataSchema);
