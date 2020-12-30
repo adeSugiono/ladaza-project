@@ -418,93 +418,6 @@
                             </div><!-- .nk-block -->
                         </form>
                     </div>
-
-                    <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct"
-                    data-toggle-screen="any" data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
-                    <div class="nk-block-head">
-                        <div class="nk-block-head-content">
-                            <h5 class="nk-block-title">New Product</h5>
-                            <div class="nk-block-des">
-                                <p>Add information and add new product.</p>
-                            </div>
-                        </div>
-                    </div><!-- .nk-block-head -->
-                    <div class="nk-block">
-                        <form action="/api/product" method="POST" id="form-edit">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label" for="product-title">Product Title</label>
-                                        <div class="form-control-wrap">
-                                            <input type="text" class="form-control" id="title">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-mb-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="regular-price">Brand</label>
-                                        <div class="form-control-wrap">
-                                            <input type="text" class="form-control" id="brand">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-mb-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="sale-price">Price</label>
-                                        <div class="form-control-wrap">
-                                            <input type="text" class="form-control" id="price">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-mb-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="stock">Quantity</label>
-                                        <div class="form-control-wrap">
-                                            <input type="text" class="form-control" id="quantity">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-mb-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="SKU">Category</label>
-                                        <div class="form-control-wrap">
-                                            <input type="text" class="form-control" id="category">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label" for="category">Description</label>
-                                        <div class="form-control-wrap">
-                                            <input type="text" class="form-control" id="description">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label" for="tags">Detail</label>
-                                        <div class="form-control-wrap">
-                                            <input type="text" class="form-control" id="detail">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="upload-zone small bg-lighter my-2">
-                                        <div class="dz-message">
-                                            <span class="dz-message-text">Drag and drop file</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary" type="submit"><em
-                                            class="icon ni ni-plus"></em><span>Add
-                                            New</span></button>
-                                </div>
-                            </div><!-- .nk-block -->
-                        </form>
-                    </div>
-
-
                 </div>
             </div>
         </div>
@@ -537,13 +450,11 @@
                 addData()
                 $('#form-input').trigger("reset");
             })
-
             $("#table-head #table-item").on("click", ".btn-delete", function () {
                 if (confirm("Are you sure ?")) {
                     deleteData($(this).attr("data-id"));
                 }
             })
-
         })
         const getData = () => {
             $.ajax({
@@ -582,8 +493,8 @@
                                                             class="icon ni ni-more-h"></em></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <ul class="link-list-opt no-bdr">
-                                                            <li><button data-edit="${item._id}" data-title="${item.title}" data-brand="${item.brand}" data-price="${item.price}" data-quantity="${item.quantity}" data-category="${item.category}" data-description="${item.description}" data-detail="${item.detail}" type="submit" class="btn btn-danger btn-primary"><em class="icon ni ni-trash" dataid="${item._id}"></em><span>Edit
-                                                                        Product</span></a></li></button>
+                                                            <li><a href="#" data-target="addProduct"><em class="toggle icon ni ni-edit"></em><span>Edit
+                                                                        Product</span></a></li>
                                                             <li><a href="#"><em class="icon ni ni-eye"></em><span>View
                                                                         Product</span></a></li>
                                                             <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Product
@@ -616,7 +527,8 @@
                     console.log({ data })
                 })
                 .fail(function (jqXHR, textStatus) {
-                    alert("Request failed delete data: " + textStatus);
+                    alert("Request failed delete data: " + textStatus
+);
                 })
         }
         const deleteData = (id) => {
