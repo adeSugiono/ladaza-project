@@ -1,15 +1,21 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
 mongoose.connect('mongodb://localhost/ladazadb', {
-    useUnifiedTopology: true, 
-    useNewUrlParser: true, 
-    useFindAndModify: false 
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("We're connected to mongoose!")
 });
 
 const indexRouter = require('./routes/index');
