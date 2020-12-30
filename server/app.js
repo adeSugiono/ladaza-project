@@ -5,14 +5,11 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
-<<<<<<< HEAD
-=======
 const multer = require('multer');
->>>>>>> 50d96ab9b8b377f4fe33d63597acd8ff10b2d234
 
 mongoose.connect('mongodb://localhost/ladazadb', {
     useNewUrlParser: true,
-    useUnifiedTopology: true 
+    useUnifiedTopology: true
 });
 
 const db = mongoose.connection;

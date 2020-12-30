@@ -168,8 +168,8 @@
                                         </ul>
                                     </div>
                                     <div class="dropdown-inner">
-                                        <ul class="link-list">
-                                            <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign
+                                        <ul class="link-list" id="logout_button">
+                                            <li><a href="/logout"><em class="icon ni ni-signout"></em><span>Sign
                                                         out</span></a></li>
                                         </ul>
                                     </div>
@@ -183,7 +183,7 @@
         <!-- main header @e
     
     
-    <!-- content @s -->
+    <-- content @s -->
         <div class="nk-content ">
             <div class="container-fluid">
                 <div class="nk-content-inner">
@@ -441,6 +441,8 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
+    <script src="./assets/js/bundle.js?ver=2.2.0"></script>
+    <script src="./assets/js/scripts.js?ver=2.2.0"></script>
     <script type="text/javascript">
         const API_URL = 'http://localhost:3000/api';
         $(document).ready(function () {
@@ -454,6 +456,9 @@
                 if (confirm("Are you sure ?")) {
                     deleteData($(this).attr("data-id"));
                 }
+            })
+            $('#logout_button').click(function () {
+                destroyUser();
             })
         })
         const getData = () => {
@@ -528,7 +533,7 @@
                 })
                 .fail(function (jqXHR, textStatus) {
                     alert("Request failed delete data: " + textStatus
-);
+                    );
                 })
         }
         const deleteData = (id) => {
@@ -544,9 +549,22 @@
                     alert("Request failed delete data: " + textStatus);
                 })
         }
+        const destroyUser = () => {
+            let tokenStorage = localStorage.getItem("token");
+            $.ajax({
+                method: "GET",
+                url: `${API_URL}/admin/logout`,
+                headers: { 'token': tokenStorage },
+                dataType: "json"
+            }).done(function (data) {
+                if (data.logout) {
+                    localStorage.removeItem("token");
+                    localStorage.removeItem("email");
+                    window.location = '/login';
+                }
+            })
+        }
     </script>
-    <script src="./assets/js/bundle.js?ver=2.2.0"></script>
-    <script src="./assets/js/scripts.js?ver=2.2.0"></script>
 </body>
 
 </html>
