@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 
 mongoose.connect('mongodb://localhost/ladazadb', {
     useNewUrlParser: true,
