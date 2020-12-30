@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const bodyParser = require('body-parser');
+const multer = require('multer');
 
 mongoose.connect('mongodb://localhost/ladazadb', {
     useNewUrlParser: true,
@@ -23,6 +23,25 @@ const productRouter = require('./routes/product');
 const adminRouter = require('./routes/admin');
 
 const app = express();
+
+const fileStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'images');
+    },
+    filename: (req, file, cb) => {
+        cb(null, new Date().toString() + '-' + file.originalname)
+    }
+})
+
+const fileFilter = (req, file, cb) => {
+    if(file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg'){
+        cb(null, true);
+    } else {
+        cb(null, false);
+    }
+}
+
+app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
